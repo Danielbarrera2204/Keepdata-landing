@@ -1,0 +1,47 @@
+<header id="site-header" class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="#" class="text-xl font-bold text-navy flex items-center gap-2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-brand">
+        <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2"/>
+        <path d="M7 9h10M7 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      KEEPDATA
+    </a>
+
+    <nav class="hidden md:flex gap-8 text-sm font-medium text-graytext">
+      <a href="#inicio" class="hover:text-brand transition">Inicio</a>
+      <a href="#como-funciona" class="hover:text-brand transition">Cómo funciona</a>
+      <a href="#beneficios" class="hover:text-brand transition">Beneficios</a>
+      <a href="#funcionalidades" class="hover:text-brand transition">Funcionalidades</a>
+      <a href="#seguridad" class="hover:text-brand transition">Seguridad</a>
+      <a href="#faq" class="hover:text-brand transition">FAQ</a>
+    </nav>
+
+    <a href="#cta-form" class="hidden md:inline-block bg-brand text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-navy transition">
+      Únete al piloto
+    </a>
+
+    <button id="menu-btn" class="md:hidden" aria-label="Abrir menú">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="hidden md:hidden flex-col gap-4 px-6 pb-6 text-graytext font-medium">
+    <a href="#inicio">Inicio</a>
+    <a href="#como-funciona">Cómo funciona</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#seguridad">Seguridad</a>
+    <a href="#faq">FAQ</a>
+    <a href="#cta-form" class="bg-brand text-white text-center px-5 py-2.5 rounded-lg font-semibold">Únete al piloto</a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    menu?.classList.toggle('flex');
+  });
+</script>
