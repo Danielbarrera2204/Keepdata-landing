@@ -1,0 +1,25 @@
+<div id="bg-pattern" class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+  <!-- Capa de puntos -->
+  <svg class="absolute -top-1/4 -left-1/4 w-[150%] h-[150%] opacity-20" id="dots-layer">
+    <defs>
+      <pattern id="dot-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1.6" fill="#1E4FA3" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#dot-grid)" />
+  </svg>
+
+  <!-- Capa de líneas diagonales -->
+  <svg class="absolute -top-1/4 -left-1/4 w-[150%] h-[150%] opacity-[0.04]" id="lines-layer">
+    <defs>
+      <pattern id="diagonal-lines" width="60" height="60" patternTransform="rotate(35)" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="0" x2="0" y2="60" stroke="#0B1F3A" stroke-width="1.5" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#diagonal-lines)" />
+  </svg>
+
+  <!-- Manchas de gradiente muy sutiles para dar profundidad -->
+  <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-skylight/40 rounded-full blur-3xl"></div>
+</div>

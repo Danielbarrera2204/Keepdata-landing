@@ -1,5 +1,9 @@
-<section id="como-funciona" class="py-24 bg-skylight/30">
-  <div class="max-w-7xl mx-auto px-6">
+---
+import GridOverlay from './GridOverlay.astro';
+---
+<section id="como-funciona" class="relative py-24 bg-skylight/30">
+  <GridOverlay />
+  <div class="max-w-7xl mx-auto px-6 relative">
     <div class="max-w-3xl mx-auto text-center fade-in opacity-0 translate-y-6 transition-all duration-700">
       <h2 class="text-3xl md:text-4xl font-extrabold text-navy">
         KeepData convierte documentos desordenados en información útil.
@@ -9,21 +13,34 @@
       </p>
     </div>
 
-    <div class="mt-16 grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl shadow-sm p-8 text-center fade-in opacity-0 translate-y-6 transition-all duration-700">
-        <span class="text-brand font-extrabold text-4xl">01</span>
-        <h3 class="mt-4 font-bold text-navy text-xl">Recibe</h3>
-        <p class="mt-2 text-graytext text-sm">Carga o recibe tus facturas en diferentes formatos.</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-sm p-8 text-center fade-in opacity-0 translate-y-6 transition-all duration-700">
-        <span class="text-brand font-extrabold text-4xl">02</span>
-        <h3 class="mt-4 font-bold text-navy text-xl">Extrae</h3>
-        <p class="mt-2 text-graytext text-sm">La inteligencia artificial identifica y extrae la información relevante.</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-sm p-8 text-center fade-in opacity-0 translate-y-6 transition-all duration-700">
-        <span class="text-brand font-extrabold text-4xl">03</span>
-        <h3 class="mt-4 font-bold text-navy text-xl">Organiza</h3>
-        <p class="mt-2 text-graytext text-sm">Revisa la información y prepárala para utilizarla o exportarla.</p>
+    <div class="mt-20 relative">
+      <!-- Línea horizontal conectora (solo desktop) -->
+      <div class="hidden md:block absolute top-6 left-[16.66%] right-[16.66%] h-0.5 bg-gradient-to-r from-brand/20 via-brand to-brand/20"></div>
+
+      <div class="grid md:grid-cols-3 gap-12 md:gap-8">
+        <div class="relative text-center fade-in opacity-0 translate-y-6 transition-all duration-700">
+          <div class="relative z-10 w-12 h-12 mx-auto rounded-full bg-brand text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand/30">
+            01
+          </div>
+          <h3 class="mt-6 font-bold text-navy text-xl">Recibe</h3>
+          <p class="mt-2 text-graytext text-sm max-w-[220px] mx-auto">Carga o recibe tus facturas en diferentes formatos.</p>
+        </div>
+
+        <div class="relative text-center fade-in opacity-0 translate-y-6 transition-all duration-700">
+          <div class="relative z-10 w-12 h-12 mx-auto rounded-full bg-brand text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand/30">
+            02
+          </div>
+          <h3 class="mt-6 font-bold text-navy text-xl">Extrae</h3>
+          <p class="mt-2 text-graytext text-sm max-w-[220px] mx-auto">La inteligencia artificial identifica y extrae la información relevante.</p>
+        </div>
+
+        <div class="relative text-center fade-in opacity-0 translate-y-6 transition-all duration-700">
+          <div class="relative z-10 w-12 h-12 mx-auto rounded-full bg-brand text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand/30">
+            03
+          </div>
+          <h3 class="mt-6 font-bold text-navy text-xl">Organiza</h3>
+          <p class="mt-2 text-graytext text-sm max-w-[220px] mx-auto">Revisa la información y prepárala para utilizarla o exportarla.</p>
+        </div>
       </div>
     </div>
   </div>

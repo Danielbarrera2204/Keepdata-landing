@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import BackgroundPattern from '../components/BackgroundPattern.astro';
 
 const { title = "KeepData | Automatización inteligente de facturas",
   description = "Automatiza el procesamiento de facturas con inteligencia artificial. Reduce tareas manuales, organiza tu información y mejora la eficiencia de tu operación con KeepData." } = Astro.props;
@@ -21,7 +22,9 @@ const { title = "KeepData | Automatización inteligente de facturas",
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body class="font-sans text-navy bg-white antialiased">
+  <BackgroundPattern />
   <slot />
   <script src="../scripts/animations.js"></script>
+  <script src="../scripts/parallax.js"></script>
 </body>
 </html>
